@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liberty Lift - Option A (Accordion)</title>
+<style>
+  :root{--blue:#0B5DA8;--navy:#0F2942;--text:#3f4650;--muted:#6b7280;--line:#dcdfe3;--bg:#f4f5f6;--white:#ffffff;}
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:Arial, Helvetica, sans-serif;background:var(--bg);color:var(--text);line-height:1.55;}
+  .wrap{max-width:1120px;margin:0 auto;padding:60px 28px;}
+  h2{font-size:26px;font-weight:800;color:var(--navy);text-transform:uppercase;margin:0 0 14px;letter-spacing:.01em;}
+  .intro{font-size:14.5px;color:var(--muted);margin:0 0 30px;max-width:900px;}
+  .img-ph{background:#e3e6e9;border:1px dashed #aeb5bc;display:flex;align-items:center;justify-content:center;color:#8b929a;font-size:12px;letter-spacing:.14em;text-transform:uppercase;}
+  .drop{width:16px;height:16px;flex:0 0 16px;margin-right:9px;fill:var(--navy);}
+  ul.feat{list-style:none;margin:0;padding:0;}
+  ul.feat li{position:relative;padding:0 0 11px 20px;font-size:14px;}
+  ul.feat li:before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:var(--blue);}
+  ul.feat li strong{color:var(--navy);}
+  .section{margin-top:64px;}
+  .split{display:grid;grid-template-columns:0.9fr 1.1fr;gap:34px;align-items:start;}
+  .split h2{margin-top:4px;}
+  .subhd{font-size:14px;font-weight:bold;color:var(--navy);text-transform:uppercase;letter-spacing:.04em;margin:18px 0 12px;}
+  .split p{font-size:14px;margin:0 0 14px;}
+  .acc-item{background:var(--white);border:1px solid var(--line);margin-bottom:10px;}
+  .acc-head{display:flex;align-items:center;gap:10px;width:100%;padding:18px 22px;background:transparent;border:0;cursor:pointer;text-align:left;}
+  .acc-head .hdtitle{flex:1;font-size:16px;font-weight:bold;color:var(--navy);display:flex;align-items:center;}
+  .circle{width:26px;height:26px;flex:0 0 26px;border:1.5px solid var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:17px;line-height:1;}
+  .circle:before{content:"+";}
+  .acc-item.open .circle{background:var(--blue);color:var(--white);}
+  .acc-item.open .circle:before{content:"\00d7";}
+  .acc-body{display:none;padding:0 22px 24px 22px;}
+  .acc-item.open .acc-body{display:block;}
+  .acc-body p{font-size:14px;margin:0 0 14px;}
+  .acc-body .subhd{margin-top:20px;}
+  .drophead{width:16px;height:16px;margin-right:9px;fill:var(--navy);vertical-align:-2px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- CAPILLARY SERVICES -->
+  <h2>Capillary Services</h2>
+  <p class="intro">Capillary tubing delivers downhole treatment programs with pinpoint precision, ensuring 100 percent of the chemical reaches the correct point in the wellbore. This eliminates the uncertainty of annular backside treatments and the concern for annular pressures inhibiting delivery, giving operators full confidence that their chemical programs are working.</p>
+
+  <div class="img-ph" style="height:340px;">Coiled tubing photo</div>
+
+  <!-- EQUIPMENT / CAPILLARY TUBING (ACCORDION) -->
+  <div style="margin-top:26px;">
+    <div class="acc-item">
+      <button class="acc-head" onclick="toggleAcc(this)">
+        <span class="hdtitle"><svg class="drophead" viewBox="0 0 24 24"><path d="M12 2C12 2 5 10 5 15a7 7 0 0 0 14 0C19 10 12 2 12 2Z"/></svg>Equipment</span>
+        <span class="circle"></span>
+      </button>
+      <div class="acc-body">
+        <p>One call, we bring it all: sheaves, glycol, spools, tubing, check valves, mandrels, fittings, and tools. Everything the job needs is included in our setup.</p>
+        <ul class="feat">
+          <li>Our capillary trailers are purpose-built for safety and efficiency, designed in collaboration with the manufacturer to exceed industry safety requirements. Every trailer is fully self-sufficient on location.</li>
+          <li>Self-loading and self-unloading capability, no additional equipment required on location</li>
+          <li>Triplex pump capable of pressure testing to 6,000 psi</li>
+          <li>Dedicated onboard hydraulic air compressor for pneumatic tools</li>
+          <li>Trailers can pump on the fly, both while pulling and running in hole</li>
+          <li>Hydraulically powered level wind keeps the operator out of the line of fire during pulling operations</li>
+          <li>Fully open spindle type secondary retention on sheaves, proof tested to 12,000 lbs</li>
+          <li>Sacrificial unions are the standard</li>
+          <li>Daily and monthly equipment inspections with documentation on every job</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-head" onclick="toggleAcc(this)">
+        <span class="hdtitle"><svg class="drophead" viewBox="0 0 24 24"><path d="M12 2C12 2 5 10 5 15a7 7 0 0 0 14 0C19 10 12 2 12 2Z"/></svg>Capillary Tubing</span>
+        <span class="circle"></span>
+      </button>
+      <div class="acc-body">
+        <p>We carry competitively priced 1/4", 3/8", and 1/2" capillary tubing in 316L, 2205, 825, and 625 alloy compositions, with a minimum of 100,000' of 2205 stainless in inventory at all times. Custom pricing is available based on volume requirements.</p>
+        <ul class="feat">
+          <li><strong>316L:</strong> Applicable for banded chemical delivery and surface applications; single-use downhole product</li>
+          <li><strong>2205:</strong> The Bakken standard; higher chromium and molybdenum content for superior corrosion resistance and strength; reusable downhole; typical inventory 100,000' to 300,000'</li>
+          <li><strong>825:</strong> Incorporates copper, titanium, and elevated nickel (38-46%); ideal for H2S scavenger delivery in moderate H2S environments with nickel-plated downhole equipment</li>
+          <li><strong>625:</strong> Minimum 58% nickel with elevated molybdenum and chromium; the most corrosion and temperature resistant option available; best suited for high H2S environments (Madison or Mission Canyon formations)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CABLE SPOOLING -->
+  <div class="section split">
+    <div class="img-ph" style="height:400px;">Cable spooling photo</div>
+    <div>
+      <h2>Cable Spooling</h2>
+      <p>Liberty Lift provides professional ESP cable spooling services for pulls and installs including laydowns across the Bakken and Powder River Basin. Our cable spooling trailers have been purpose-retrofitted for the region's demanding conditions, both surface-level climate extremes and deep wellbore applications.</p>
+      <div class="subhd">Equipment</div>
+      <ul class="feat">
+        <li>Up-sized drive motors for the torque and speed to handle any job safely and efficiently</li>
+        <li>Upgraded drive system and tire drive system built for continuous use</li>
+        <li>Onboard air compressors for banding installation</li>
+        <li>Ability to install clamps from all leading manufacturers: Slingco, Cannon, Winterhawk, Hulk, and Grippy</li>
+        <li>Self-loading and self-unloading capability on location</li>
+        <li>Standard 54" sheave, pull tested annually to 7,500 lbs</li>
+      </ul>
+      <p>Our field service technicians perform ESP equipment laydowns and generate lay down reports for all major OEM manufacturers.</p>
+    </div>
+  </div>
+
+  <!-- DOWNHOLE PRODUCTS (ACCORDION) -->
+  <div class="section">
+    <h2>Downhole Products and Additional Services</h2>
+    <p class="intro">Liberty Lift stocks a comprehensive line of downhole products to support spooling and capillary operations.</p>
+
+    <div class="acc-item">
+      <button class="acc-head" onclick="toggleAcc(this)">
+        <span class="hdtitle"><svg class="drophead" viewBox="0 0 24 24"><path d="M12 2C12 2 5 10 5 15a7 7 0 0 0 14 0C19 10 12 2 12 2Z"/></svg>Check Valves</span>
+        <span class="circle"></span>
+      </button>
+      <div class="acc-body">
+        <ul class="feat">
+          <li>Wide range availability for moderate/sweet to highly corrosive/sour wellbore conditions</li>
+          <li>Flow range 0.5 to 8.0 gpm (275 bbls/d); capable of maintaining differential pressures up to 8,000 psi</li>
+          <li>Standard inventory machined from 2205 stainless; also available in Inconel alloy 825 and 625</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-head" onclick="toggleAcc(this)">
+        <span class="hdtitle"><svg class="drophead" viewBox="0 0 24 24"><path d="M12 2C12 2 5 10 5 15a7 7 0 0 0 14 0C19 10 12 2 12 2Z"/></svg>Injection Mandrels</span>
+        <span class="circle"></span>
+      </button>
+      <div class="acc-body">
+        <ul class="feat">
+          <li>Available in 2-3/8", 2-7/8" and 3-1/2" dimensions</li>
+          <li>Compatible with tubing-side delivery for gas lift and conventional rod pump applications</li>
+          <li>Compatible with annulus delivery for ESP applications</li>
+          <li>Available in L80 and N80 grades; all EP2 coated</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-head" onclick="toggleAcc(this)">
+        <span class="hdtitle"><svg class="drophead" viewBox="0 0 24 24"><path d="M12 2C12 2 5 10 5 15a7 7 0 0 0 14 0C19 10 12 2 12 2Z"/></svg>Banding</span>
+        <span class="circle"></span>
+      </button>
+      <div class="acc-body">
+        <ul class="feat">
+          <li>Monel, 304 stainless and superbands available depending on wellbore environment</li>
+          <li>Pressure regulators maintain consistent band tension during installation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-head" onclick="toggleAcc(this)">
+        <span class="hdtitle"><svg class="drophead" viewBox="0 0 24 24"><path d="M12 2C12 2 5 10 5 15a7 7 0 0 0 14 0C19 10 12 2 12 2Z"/></svg>Surface Manifolds</span>
+        <span class="circle"></span>
+      </button>
+      <div class="acc-body">
+        <ul class="feat">
+          <li>Double block and bleed design for servicing capillary lines</li>
+          <li>5,000 psi gauge standard</li>
+          <li>Capillary filters with 100-micron screens standard</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-head" onclick="toggleAcc(this)">
+        <span class="hdtitle"><svg class="drophead" viewBox="0 0 24 24"><path d="M12 2C12 2 5 10 5 15a7 7 0 0 0 14 0C19 10 12 2 12 2Z"/></svg>Capillary Tubing Inspections</span>
+        <span class="circle"></span>
+      </button>
+      <div class="acc-body">
+        <p>Liberty Lift conducts capillary tubing inspections using custom-built equipment, a service that has reduced customer capital expenditure on capillary tubing by up to 60 percent. Rather than replacing tubing on every run, we inspect, recertify and return it to service.</p>
+        <div class="subhd">The inspection process includes</div>
+        <ul class="feat">
+          <li>Pressure testing</li>
+          <li>Corrosion and splice removal</li>
+          <li>Tubing replacement or addition as needed</li>
+          <li>Recertification</li>
+          <li>Categorized storage at our yard until the customer is ready to redeploy</li>
+          <li>Full transparency of customer owned inventory with monthly rolling stock reports</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-head" onclick="toggleAcc(this)">
+        <span class="hdtitle"><svg class="drophead" viewBox="0 0 24 24"><path d="M12 2C12 2 5 10 5 15a7 7 0 0 0 14 0C19 10 12 2 12 2Z"/></svg>Reservoir Monitoring &amp; Downhole Gauges</span>
+        <span class="circle"></span>
+      </button>
+      <div class="acc-body">
+        <p>Liberty Lift installs permanent in-well monitoring systems and downhole gauges that give operators detailed, real-time information about their wellbore, reservoir and lift system performance.</p>
+        <ul class="feat">
+          <li>Real-time bottomhole pressure (BHP) and bottomhole temperature (BHT) during multi-phase flow</li>
+          <li>Reduces operating costs through remote monitoring and reduced site visits</li>
+          <li>Simple spooling installation systems</li>
+          <li>Calibrates gas lift design to maximize performance</li>
+          <li>Available gauge types: DataCan permanent monitoring, memory gauges, fiber optic, PLT</li>
+          <li>Gas lift: 0.75" piezo permanent bottom pressure tools</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="img-ph" style="height:360px;">Field equipment photo</div>
+  </div>
+
+</div>
+<script>
+  function toggleAcc(btn){ btn.parentElement.classList.toggle('open'); }
+</script>
+</body>
+</html>
